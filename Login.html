@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="max-w-7xlmx-auto">
+    <!-- Navbar -->
+    <nav class="bg-white p-5">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center space-x-5 px-5">
+            <a href="#" class="text-gray-800 hover:text-orange-500 font-semibold">TECHWAY</a>
+          </div>
+          <!-- Links de Navegação (Centralizados) -->
+        <div class="flex-1 flex text-center space-x-6">
+            <!-- Botão "Página Inicial" -->
+            <button class="text-gray-800 hover:text-orange-500 bg-transparent focus:outline-none">
+              Página Inicial
+            </button>
+            <!-- Botão "ONGs" -->
+            <button class="text-gray-800 hover:text-orange-500 bg-transparent focus:outline-none">
+              ONGs
+            </button>
+            <!-- Botão "Sobre" -->
+            <button class="text-gray-800 hover:text-orange-500 bg-transparent focus:outline-none">
+              Sobre
+            </button>
+            <!-- Botão "Campanha Memória" -->
+            <button class="text-gray-800 border border-orange-500 px-10 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 hover:border-gray-800 hover:text-orange-500">
+                Campanha Memória
+            </button>
+          </div>
+        <!-- Barra de Pesquisa -->
+        <div class="relative">
+            <input type="text" placeholder="Procurar memorial" class="py-2 px-4 pl-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 w-64" />
+            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.742a6.5 6.5 0 1 0-1.417 1.417l3.486 3.485a1 1 0 1 0 1.415-1.414l-3.484-3.485zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+            <!--botao de login-->
+            <button class="text-gray-800 border border-orange-500 px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 hover:border-gray-800 hover:text-orange-500 ml-4">
+              <img src="Imagens/perfil.png" class="size-4.5	inline items-center">
+              Login
+            </button>
+          </div>
+        </div>
+    </nav>
+    <!--Inicio do Login-->
+    <section class="bg-gray-50 bg-[#0D3B66]-200">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <a href="Index.html" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-[#0D3B66]">
+                Via da Saudade
+                <img>
+            </a>
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                        Cadastre sua Conta
+                    </h1>
+                    <form class="space-y-4 md:space-y-6" action="#">
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="nome@.com" required="">
+                        </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Senha</label>
+                            <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+                        </div>
+                        <button type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login</button>
+                        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                            Não tem uma conta ainda? <a href="Cadastro.html" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Cadastre-se</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+</body>
+</html>
