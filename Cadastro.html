@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Navbar -->
@@ -13,7 +19,7 @@
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <div class="flex items-center space-x-5 px-5">
-            <a href="#" class="text-gray-800 hover:text-orange-500 font-semibold">TECHWAY</a>
+            <img src="Imagens/logopt2_techway.png" alt="Logo" class="w-28">
           </div>
           <!-- Links de Navegação (Centralizados) -->
         <div class="flex-1 flex text-center space-x-6">
@@ -48,9 +54,10 @@
           </div>
         </div>
     </nav>
+    <h2 class="text-center font-semibold text-[70px] text-blue-900 mb-[-70px] mt-2">Cadastre-se</h2>
     <div class="flex items-center justify-center h-screen">
-        <form class="w-full max-w-lg">
-          <div class="flex flex-wrap -mx-3 mb-6 mt-0">
+        <form class="w-full max-w-[550px]">
+          <div class="flex flex-wrap -mx-3 mb-3 mt-0">
             <div class="w-full md:w-1/2 p-0 mb-6 md:mb-0">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
                 Primeiro Nome
@@ -65,12 +72,24 @@
             </div>
           </div>
           <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
+            <div class="w-[560px]">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
+                Email
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-email" type="email" placeholder="Seu email">
+            </div>
+            <div class="w-[279px]">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
                 Senha
               </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="**********">
               <p class="text-gray-600 text-xs italic">Use uma senha forte com Letras maiusculas e números.</p>
+            </div>
+            <div class="w-[270px] mx-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Confirme Senha
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="*********">
             </div>
           </div>
           <div class="flex flex-wrap -mx-3 mb-2">
@@ -81,10 +100,10 @@
               <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-md p-2 w-1/2 focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="...">
             </div>
             <div class="flex items-center space-x-4">
-              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold ml-2 mb-2" for="grid-state">
                 Estado
               </label>
-              <div class="relative">
+              <div class="relative w-[230px]">
                 <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                     <option>Selecione seu Estado</option>
                     <option>Acre</option>
@@ -121,7 +140,7 @@
               </div>
             </div>
           </div>
-          <div class="md:flex md:items-center ">
+          <div class="md:flex md:items-center">
             <div class="w-full items-center">
               <button class=" w-full shadow bg-blue-950 hover:bg-white-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 mt-4 rounded" type="button">
                 Cadastre-se
