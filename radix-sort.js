@@ -20,39 +20,35 @@ export default class RadixSort {
 
   generateBucketList() {
     this.#bucketList = Array.from({ length: 10 }, () => {
-      [];
-    });
-    console.log(this.#bucketList);
-    this.#bucketList.forEach((element) => {
-      console.log();
+      return [];
     });
   }
 
   radixSorting(array) {
     const bigger = this.getBiggerNumber(array);
     const length = this.getMaxLength(bigger);
-    let testStack = Array.from({ length: 10 }, () => {
-      new Array();
-    });
     this.generateBucketList();
     for (let size = 0; size < length; size++) {
-      let unit = Math.pow(10, size + 1);
+      let unit = Math.pow(10, size);
       array.forEach((element) => {
-        let algarism = element % unit;
-        testStack[algarism].push(element);
+        let algarism = Math.floor(element / unit) % 10;
+        this.#bucketList[algarism].push(element);
       });
-      this.#radixStack = () => {
-        for (let index = 9; index >= 0; index--) {
-          while (testStack[index].length) {
-            this.#radixStack.unshift(testStack[index].pop());
-          }
+      this.#radixStack = [];
+      for (let index = 9; index >= 0; index--) {
+        while (this.#bucketList[index].length) {
+          this.#radixStack.unshift(this.#bucketList[index].pop());
         }
-        array = this.#radixStack;
-      };
+      }
+      array = this.#radixStack;
     }
+    return array;
   }
 }
 
 const sorter = new RadixSort();
-const array = [32, 45, 12];
-sorter.generateBucketList();
+
+// Seção para testar o que tá rolando
+/*const array = [170, 45, 75, 90, 802, 24, 2, 66];
+console.log("Array antes de fazer a ordenação:", array);
+console.log("Array após a ordenação:", sorter.radixSorting(array));*/
